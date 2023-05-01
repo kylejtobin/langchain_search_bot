@@ -12,7 +12,7 @@ The LangChain  Search Bot is perfect for anyone who wants to:
 - Explore the potential of language models like OpenAI's GPT family
 - Integrate third-party APIs, such as Google Search via SerpAPI, into a chatbot
 
-This chatbot is not only a learning tool but also a springboard for your future NLP projects. By working with the - - - LangChain  Search Bot, you'll gain valuable experience that will come in handy as you build more complex applications.
+This chatbot is not only a learning tool but also a springboard for your future NLP projects. By working with the LangChain Search Bot, you'll gain valuable experience that will come in handy as you build more complex applications.
 
 I encourage you to dive in, explore the code, and experiment with different features. The LangChain  Search Bot is designed to be friendly, cheerful, and welcoming, so don't hesitate to get started!
 
