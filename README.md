@@ -20,15 +20,26 @@ For a detailed introduction to LangChain  and its components, please refer to th
 
 So, what are you waiting for? Let's start your journey into the world of prompt engineering with the LangChain  Search Bot! Happy coding! 🚀
 
+## Prerequisites
+* OpenAI API Key - For more information on how to create an OpenAI API key, visit the [OpenAI Platform Website](https://platform.openai.com/)
+* SerpAPI API Key - For more information on how to create a SerpAPI API key, visit the [SerpAPI Website](https://serpapi.com/)
+* Docker Desktop - [Docker Desktop Website](https://www.docker.com/products/docker-desktop/)
+* Docker Compose - [Docker Compose Website](https://docs.docker.com/compose/install/)
+
 ## Install & Config 🛠️
 
 1. Install `docker-desktop` and `docker-compose` on your system.
 2. Configure a `key.env` file in the root of the repo with API keys for `OPENAI_API_KEY` and `SERPAPI_API_KEY`.
 3. Configure the `config.yml` with a chatbot name.
 4. Configure the `image` and `container_name` in `docker-compose.yml`
-5. Run `docker-compose up` from a shell in the root of the repo.
-6. Once the container is built connect to it with `docker exec -it CONTAINER_NAME /bin/bash`
-7. Run the bot with `python3 src/main.py`
+   1. Example docker image: `ubuntu:latest`
+   2. Example container_name: `my_chatbot` 
+5. Run `docker-compose build`
+6. Run `docker-compose up -d` from a shell in the root of the repo.
+7. Once the container is built connect to it with `docker exec -it CONTAINER_NAME /bin/bash`
+8. Run the bot with `python3 src/main.py`
+9. To exit the bot type `exit`
+10. Tear down the docker environment with `docker-compose down`
 
 ## Getting Started with Prompt Engineering 👨‍💻💬🗨️🤖
 In this section, we will walk through a simple example of prompt engineering using a provided prompt template. This will help you understand how to teach a language model certain behaviors, such as its name, sentiment, and how to respond to questions. We will also explore the logic behind the formatted section. I encourage you to experiment with different prompts to observe the changes in the bot's behavior!
