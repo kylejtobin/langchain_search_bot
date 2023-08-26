@@ -5,7 +5,7 @@ from template.template import CustomPromptTemplate, read_template
 from langchain.chat_models import ChatOpenAI
 from parser.parser import CustomOutputParser
 from dotenv import load_dotenv
-import os
+from datetime import datetime
 from pathlib import Path
 from utils.config import load_config
 
@@ -15,13 +15,13 @@ config = load_config()
 def setup_agent(chatbot_name):
     # Instantiate a SerpAPIWrapper object for search functionality
     search = SerpAPIWrapper()
-    # Create a list of tools, in this case, a search tool
+    # Instantiate a datetime object for datetime functionality
     tools = [
         Tool(
             name="Search",
             func=search.run,
-            description="useful for when you need to answer questions about current events"
-        )
+            description="The Search tool uses SerpAPI to conduct Google searches. It retrieves raw search results without any inherent interpretation. Utilize this tool to fetch real-time information, but always analyze and deduce relevant details from the results, avoiding the use of generic placeholders."
+        ),
     ]
 
     # Set up the prompt template using the base.txt file and the tools list
